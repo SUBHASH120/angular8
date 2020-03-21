@@ -1,0 +1,32 @@
+
+<form class="example-form" (ngSubmit)="customerSubmit()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Customername</mat-label>
+      <input matInput placeholder="customername" type="text" name="customername" [(ngModel)]= "cus.customername" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Contactname</mat-label>
+      <input matInput placeholder="contactname" type="text" name="contactname" [(ngModel)]= "cus.contactname" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="address" type="text" name="address" [(ngModel)]= "cus.address" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>City</mat-label>
+      <input matInput placeholder="city" type="text" name="city" [(ngModel)]= "cus.city" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Postalcode</mat-label>
+      <input matInput placeholder="postalcode" type="text" name="postalcode" [(ngModel)]= "cus.postalcode" required>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Address" type="text" name="address" [(ngModel)]= "cus.country" required></textarea>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="accent">Customer</button>&nbsp;
+    <button mat-raised-button type="button" color="accent" (click)="back()">Back</button>
+  
+  </form>
+  
