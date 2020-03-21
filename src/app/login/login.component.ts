@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   }
   loginsubmit() {
     this.auth.login(this.log).subscribe((res: any) => {
-      console.log(res);
       if (res.error === false) {
         this.router.navigate(['/listing']);
 
@@ -29,7 +28,6 @@ export class LoginComponent implements OnInit {
         alert('Invalid username password');
       }
     }, (error) => {
-      // console.log(error);
     });
   }
   register() {
