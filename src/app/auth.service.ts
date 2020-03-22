@@ -29,4 +29,18 @@ export class AuthService {
     return this.http.get(`${this.URL}listingbyid/${id}`);
   }
 
+  // customers
+
+  customeradd(cus) {
+    return this.http.post(`${this.URL}customeradd`, cus);
+  }
+  customerlist() {
+    return this.http.get(`${this.URL}customerlist`);
+  }
+  customerbyid(id: any) {
+    return this.http.get(`${this.URL}customerbyid/${id}`);
+  }
+
+
+
 }

@@ -52,7 +52,7 @@ upd: Update;
 
   }
   back() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/listing']);
   }
 
 }
