@@ -44,7 +44,12 @@ id: any;
     this.router.navigate(['./customer-list']);
 
   }
-  customerSubmit() {
+  customeredit() {
+    this.authService.customerupdate(this.cus, this.id).subscribe((res: any) => {
+      this.router.navigate(['./customer-list']);
+    }, (error) => {
+      console.log(error);
+    });
   }
 
 }

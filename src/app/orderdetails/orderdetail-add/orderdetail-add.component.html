@@ -1,0 +1,23 @@
+
+<form class="example-form" (ngSubmit)="orderdetailSubmit()">
+ 
+    <mat-form-field class="example-full-width">
+      <mat-label>orderid</mat-label>
+      <input matInput placeholder="orderid" type="text" name="orderid" [(ngModel)]= "ordd.orderid" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>productid</mat-label>
+        <input matInput placeholder="productid" type="text" name="productid" [(ngModel)]= "ordd.productid" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>quantity</mat-label>
+        <input matInput placeholder="quantity" type="text" name="quantity" [(ngModel)]= "ordd.quantity" required>
+    </mat-form-field>
+    
+  
+    
+    <button mat-raised-button type="submit" color="accent">Order detail</button>&nbsp;
+    <button mat-raised-button type="button" color="accent" (click)="back()">Back</button>
+  
+  </form>
+  

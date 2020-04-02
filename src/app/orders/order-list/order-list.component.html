@@ -1,0 +1,46 @@
+<app-header></app-header>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+    <!-- Position Column -->
+    <ng-container matColumnDef="customerid">
+      <th mat-header-cell *matHeaderCellDef> customerid</th>
+      <td mat-cell *matCellDef="let element"> {{element.customerid}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="employeeid">
+      <th mat-header-cell *matHeaderCellDef> employeeid </th>
+      <td mat-cell *matCellDef="let element"> {{element.employeeid}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="orderdate">
+      <th mat-header-cell *matHeaderCellDef> orderdate </th>
+      <td mat-cell *matCellDef="let element"> {{element.orderdate}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="shipperid">
+      <th mat-header-cell *matHeaderCellDef> shipperid </th>
+      <td mat-cell *matCellDef="let element"> {{element.shipperid}} </td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let element" (click)="edit(element)" style="cursor: pointer; color: blue;">Edit</td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let element" (click)="delete(element)" style="cursor: pointer; color: blue;"> Delete </td>
+    </ng-container>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-toolbar>
+  <button mat-raised-button type="submit" color="accent" routerLink="/order-add">Add</button>&nbsp;
+  
+  </mat-toolbar>

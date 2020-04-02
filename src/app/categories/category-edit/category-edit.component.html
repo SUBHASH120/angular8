@@ -1,0 +1,14 @@
+
+<form class="example-form" (ngSubmit)="categoryedit()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Categoryname</mat-label>
+    <input matInput placeholder="categoryname" type="text" name="categoryname" [(ngModel)]= "cat.categoryname" required>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>description</mat-label>
+    <textarea matInput placeholder="description" type="text" name="description" [(ngModel)]= "cat.description" required></textarea>
+  </mat-form-field>
+  <button mat-raised-button type="submit" color="accent">Category</button>&nbsp;
+  <button mat-raised-button type="button" color="accent" (click)="back()">Back</button>
+
+</form>

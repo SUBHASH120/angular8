@@ -1,0 +1,16 @@
+
+<form class="example-form" (ngSubmit)="shipperSubmit()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Shipper name</mat-label>
+      <input matInput placeholder="Shipper name" type="text" name="shippername" [(ngModel)]= "shi.shippername" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Phone</mat-label>
+      <input matInput placeholder="phone" type="text" name="phone" [(ngModel)]= "shi.phone" required>
+    </mat-form-field>
+    
+    <button mat-raised-button type="submit" color="accent">Shipper</button>&nbsp;
+    <button mat-raised-button type="button" color="accent" (click)="back()">Back</button>
+  
+  </form>
+  

@@ -1,0 +1,33 @@
+
+<form class="example-form" (ngSubmit)="productedit()">
+
+  
+    <mat-form-field class="example-full-width">
+        <mat-label>productname</mat-label>
+        <input matInput placeholder="productname" type="text" name="productname" [(ngModel)]= "pro.productname" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+              <mat-label>supplierid</mat-label>
+              <input matInput placeholder="supplierid" type="text" name="supplierid" [(ngModel)]= "pro.supplierid" required>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+              <mat-label>categoryid</mat-label>
+              <input matInput placeholder="categoryid" type="text" name="categoryid" [(ngModel)]= "pro.categoryid" required>
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+              <mat-label>unit</mat-label>
+              <input matInput placeholder="unit" type="text" name="unit" [(ngModel)]= "pro.unit" required>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+              <mat-label>price</mat-label>
+              <input matInput placeholder="price" type="text" name="price" [(ngModel)]= "pro.price" required>
+      </mat-form-field>
+ 
+  
+  <button mat-raised-button type="submit" color="accent">Product</button>&nbsp;
+  <button mat-raised-button type="button" color="accent" (click)="back()">Back</button>
+
+</form>

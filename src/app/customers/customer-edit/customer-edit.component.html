@@ -1,4 +1,4 @@
-<form class="example-form" (ngSubmit)="customerSubmit()">
+<form class="example-form" (ngSubmit)="customeredit()">
   <mat-form-field class="example-full-width">
     <mat-label>Customername</mat-label>
     <input matInput placeholder="customername" type="text" name="customername" [(ngModel)]= "cus.customername" required>
@@ -21,8 +21,8 @@
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <mat-label>Address</mat-label>
-    <textarea matInput placeholder="Address" type="text" name="address" [(ngModel)]= "cus.country" required></textarea>
+    <mat-label>Country</mat-label>
+    <textarea matInput placeholder="country" type="text" name="country" [(ngModel)]= "cus.country" required></textarea>
   </mat-form-field>
   <button mat-raised-button type="submit" color="accent">Customer</button>&nbsp;
   <button mat-raised-button type="button" color="accent" (click)="back()">Back</button>

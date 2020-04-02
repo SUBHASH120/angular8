@@ -1,0 +1,37 @@
+
+<form class="example-form" (ngSubmit)="supplierSubmit()">
+   
+    <mat-form-field class="example-full-width">
+      <mat-label>suppliername</mat-label>
+      <input matInput placeholder="suppliername" type="text" name="suppliername" [(ngModel)]= "sup.suppliername" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>contactname</mat-label>
+      <input matInput placeholder="contactname" type="text" name="contactname" [(ngModel)]= "sup.contactname" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>address</mat-label>
+      <input matInput placeholder="address" type="text" name="address" [(ngModel)]= "sup.address" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="city" type="text" name="city" [(ngModel)]= "sup.city" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Postalcode</mat-label>
+        <input matInput placeholder="postalcode" type="text" name="postalcode" [(ngModel)]= "sup.postalcode" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="country" type="text" name="country" [(ngModel)]= "sup.country" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="phone" type="text" name="phone" [(ngModel)]= "sup.phone" required>
+    </mat-form-field>
+    
+    <button mat-raised-button type="submit" color="accent">Supplier</button>&nbsp;
+    <button mat-raised-button type="button" color="accent" (click)="back()">Back</button>
+  
+  </form>
+  

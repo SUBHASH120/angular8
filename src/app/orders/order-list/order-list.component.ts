@@ -3,32 +3,32 @@ import { AuthService } from '../../auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-customer-list',
-  templateUrl: './customer-list.component.html',
-  styleUrls: ['./customer-list.component.css']
+  selector: 'app-order-list',
+  templateUrl: './order-list.component.html',
+  styleUrls: ['./order-list.component.css']
 })
-export class CustomerListComponent implements OnInit {
+export class OrderListComponent implements OnInit {
   displayedColumns: any[];
   dataSource: any;
 
   constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    this.displayedColumns = ['customername', 'contactname', 'address', 'city', 'postalcode', 'country', 'edit', 'delete'];
-    this.authService.customerlist().subscribe((res: any) => {
+    this.displayedColumns = ['customerid',	'employeeid',	'orderdate',	'shipperid', 'edit', 'delete'];
+    this.authService.orderlist().subscribe((res: any) => {
       console.log(res);
-      this.dataSource = res.customer;
+      this.dataSource = res.order;
     }, (error) => {
       console.log(error);
     });
   }
   edit(event) {
-    this.router.navigate(['/customer-edit', {id: event.id}]);
+    this.router.navigate(['/order-edit', {id: event.id}]);
   }
   delete(event) {
     const r = confirm('Are you sure!');
     if (r === true) {
-      this.authService.customerdelete(event.id).subscribe((res: any) => {
+      this.authService.orderdelete(event.id).subscribe((res: any) => {
         console.log(res);
         location.reload();
       }, (error) => {

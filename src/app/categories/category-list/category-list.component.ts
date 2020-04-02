@@ -3,32 +3,33 @@ import { AuthService } from '../../auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-customer-list',
-  templateUrl: './customer-list.component.html',
-  styleUrls: ['./customer-list.component.css']
+  selector: 'app-category-list',
+  templateUrl: './category-list.component.html',
+  styleUrls: ['./category-list.component.css']
 })
-export class CustomerListComponent implements OnInit {
+export class CategoryListComponent implements OnInit {
   displayedColumns: any[];
   dataSource: any;
 
   constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    this.displayedColumns = ['customername', 'contactname', 'address', 'city', 'postalcode', 'country', 'edit', 'delete'];
-    this.authService.customerlist().subscribe((res: any) => {
+    this.displayedColumns = ['categoryname', 'description', 'edit', 'delete'];
+    this.authService.categorylist().subscribe((res: any) => {
       console.log(res);
-      this.dataSource = res.customer;
+      this.dataSource = res.category;
     }, (error) => {
       console.log(error);
     });
   }
   edit(event) {
-    this.router.navigate(['/customer-edit', {id: event.id}]);
+    console.log(event.id);
+    this.router.navigate(['/category-edit', {id: event.id}]);
   }
   delete(event) {
     const r = confirm('Are you sure!');
     if (r === true) {
-      this.authService.customerdelete(event.id).subscribe((res: any) => {
+      this.authService.categorydelete(event.id).subscribe((res: any) => {
         console.log(res);
         location.reload();
       }, (error) => {
