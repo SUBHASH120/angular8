@@ -16,7 +16,6 @@ export class CustomerListComponent implements OnInit {
   ngOnInit() {
     this.displayedColumns = ['customername', 'contactname', 'address', 'city', 'postalcode', 'country', 'edit', 'delete'];
     this.authService.customerlist().subscribe((res: any) => {
-      console.log(res);
       this.dataSource = res.customer;
     }, (error) => {
       console.log(error);
